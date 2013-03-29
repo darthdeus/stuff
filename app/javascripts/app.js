@@ -16,4 +16,57 @@
 //
 // Your application begins here...
 
-window.Helvetica = Ember.Application.create();
+window.App = Ember.Application.create({
+  LOG_TRANSITIONS: true
+});
+
+App.Router.map(function() {
+  this.resource("messages");
+});
+
+App.IndexRoute = Ember.Route.extend({
+  redirect: function() {
+    this.transitionTo("messages");
+  }
+});
+
+App.MessagesRoute = Ember.Route.extend({
+  model: function() {
+    return App.Message.all();
+  }
+});
+
+App.NewMessageView = Ember.TextArea.extend({
+  classNames: "new-message",
+  keyDown: function(event) {
+    if (event.keyCode === 13) { // enter
+      App.Message.createRecord({ text: this.get("value"), author: App.username });
+      event.preventDefault();
+      this.set("value", "");
+    }
+  }
+});
+
+
+
+App.Message = Ember.Object.extend({
+  author: null,
+  text: null
+}).reopenClass({
+
+  records: [],
+  all: function() {
+    return this.records;
+  },
+  createRecord: function(attributes) {
+    this.records.pushObject(App.Message.create(attributes));
+  }
+
+});
+
+App.Message.createRecord({ text: "lorem ipsum dolor sit amet", author: "johndoe" });
+App.Message.createRecord({ text: "lorem ipsum dolor sit amet", author: "johndoe" });
+App.Message.createRecord({ text: "lorem ipsum dolor sit amet", author: "johndoe" });
+App.Message.createRecord({ text: "lorem ipsum dolor sit amet", author: "johndoe" });
+App.Message.createRecord({ text: "lorem ipsum dolor sit amet", author: "johndoe" });
+

@@ -7,3 +7,41 @@
 //
 // Your stylesheet begins here ...
 
+body {
+  background: #f7f6f1;
+}
+
+.messages {
+  color: #474545;
+
+  .message {
+    padding: 10px;
+    margin: 4px 0;
+    border-radius: 2px;
+    border: 1px solid #c7c6bf;
+    background-color: #efeee7;
+    box-shadow: inset 1px 1px rgba(255,255,255,.75);
+    overflow: hidden;
+  }
+
+  .author {
+    float: left;
+    margin-right: 5px;
+  }
+
+  .text {
+    float: left;
+  }
+
+  .new-message {
+    width: 98%;
+    background: #f9f8f3;
+  }
+
+  .new-message:focus {
+    box-shadow: 0 0 2px #999;
+    border: 1px solid #aaa;
+  }
+
+
+}

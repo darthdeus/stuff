@@ -12,4 +12,4 @@
 // Your boot code begins here...
 
 require('app');
-Helvetica.booted = true;
+App.booted = true;

@@ -1,0 +1,12 @@
+<div class="messages">
+
+  {{#each controller}}
+    <div class="message">
+      <div class="author">{{author}}</div>
+      <div class="text">{{text}}</div>
+    </div>
+  {{/each}}
+
+  {{view App.NewMessageView placeholder="Type your message"}}
+
+</div>
