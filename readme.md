@@ -15,14 +15,14 @@ Default directory structure:
 │   ├── assets
 │   │   └── images
 │   ├── config
-│   │   ├── development.coffee
+│   │   ├── development.js
 │   │   ├── initializers
-│   │   ├── production.coffee
-│   │   └── test.coffee
+│   │   ├── production.js
+│   │   └── test.js
 │   ├── index.html.erb
 │   ├── javascripts
-│   │   ├── app.coffee
-│   │   ├── boot.coffee
+│   │   ├── app.js
+│   │   ├── boot.js
 │   │   ├── controllers
 │   │   ├── models
 │   │   └── views
