@@ -1,12 +1,12 @@
 Helvetica.configure do
   # Minify JS and CSS
-  config.pipeline.minify = true
+  config.pipeline.minify = false
 
   # Generate GZip version of files along with regular version
-  config.pipeline.gzip = true
+  config.pipeline.gzip = false
 
   # Generate an HTML5 Cache Manifest for offline support
-  config.pipeline.manifest = true
+  config.pipeline.manifest = false
 
   # Run templates through a precompiler instead of using
   # compile and runtime mode.

@@ -10,7 +10,7 @@ class Helvetica < Iridium::Application
   # declared order. Undeclared files will be concatentated after
   # all declared files
   #
-  config.dependencies.load "bootstrap", "handlebars", "ember", "ember-data"
+  config.dependencies.load "minispade", "jquery", "bootstrap", "handlebars", "ember", "ember-data"
 
   # Specify a different place to load your templates. All templates
   # will be added to Javascript array specified here:

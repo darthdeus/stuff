@@ -16,6 +16,7 @@
 //
 // Your application begins here...
 
+
 window.App = Ember.Application.create({
   LOG_TRANSITIONS: true
 });
@@ -47,8 +48,6 @@ App.NewMessageView = Ember.TextArea.extend({
   }
 });
 
-
-
 App.Message = Ember.Object.extend({
   author: null,
   text: null
@@ -69,4 +68,3 @@ App.Message.createRecord({ text: "lorem ipsum dolor sit amet", author: "johndoe"
 App.Message.createRecord({ text: "lorem ipsum dolor sit amet", author: "johndoe" });
 App.Message.createRecord({ text: "lorem ipsum dolor sit amet", author: "johndoe" });
 App.Message.createRecord({ text: "lorem ipsum dolor sit amet", author: "johndoe" });
-
